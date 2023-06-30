@@ -1,5 +1,4 @@
 
-
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import HomeDropdown from '../homeDropDown/HomeDropdown';
@@ -32,32 +31,28 @@ function Navbar() {
     };
   }, []);
 
-  function handleClickHome(e) {
-    // e.stopPropagation();
+  function handleClickHome() {
     setHome(!home);
     setAbout(false);
     setContact(false);
     setSkills(false);
   }
 
-  function handleClickAbout(e) {
-    // e.stopPropagation();
+  function handleClickAbout() {
     setAbout(!about);
     setContact(false);
     setSkills(false);
     setHome(false);
   }
 
-  function handleClickSkills(e) {
-    // e.stopPropagation();
+  function handleClickSkills() {
     setSkills(!skills);
     setAbout(false);
     setContact(false);
     setHome(false);
   }
 
-  function handleClickContact(e) {
-    // e.stopPropagation();
+  function handleClickContact() {
     setContact(!contact);
     setAbout(false);
     setSkills(false);
@@ -68,11 +63,11 @@ function Navbar() {
     <>
       <nav className="navbar">
         <h3 className="logo">Logo</h3>
-  
+
         <div className={isMobile ? 'nav-links-mobile' : 'nav-links'} ref={navLinksRef}>
           <div
             className={`home ${home ? 'underline' : ''}`}
-            onMouseOver={(event) => handleClickHome(event)}
+            {...(isMobile ? { onClick: handleClickHome } : { onMouseOver: handleClickHome })}
           >
             Home {isMobile && <MdArrowDropDown />}
           </div>
@@ -83,7 +78,7 @@ function Navbar() {
           )}
           <div
             className={`about ${about ? 'underline' : ''}`}
-            onMouseOver={(event) => handleClickAbout(event)}
+            {...(isMobile ? { onClick: handleClickAbout } : { onMouseOver: handleClickAbout })}
           >
             About {isMobile && <MdArrowDropDown />}
           </div>
@@ -94,7 +89,7 @@ function Navbar() {
           )}
           <div
             className={`skills ${skills ? 'underline' : ''}`}
-            onMouseOver={(event) => handleClickSkills(event)}
+            {...(isMobile ? { onClick: handleClickSkills } : { onMouseOver: handleClickSkills })}
           >
             Skills {isMobile && <MdArrowDropDown />}
           </div>
@@ -105,7 +100,7 @@ function Navbar() {
           )}
           <div
             className={`contact ${contact ? 'underline' : ''}`}
-            onMouseOver={(event) => handleClickContact(event)}
+            {...(isMobile ? { onClick: handleClickContact } : { onMouseOver: handleClickContact })}
           >
             Contact {isMobile && <MdArrowDropDown />}
           </div>
@@ -115,15 +110,12 @@ function Navbar() {
             </div>
           )}
         </div>
-  
+
         <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
           {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
         </button>
       </nav>
     </>
   );
-          };
-          
-          export default Navbar;
-
-
+};
+export default Navbar;  
