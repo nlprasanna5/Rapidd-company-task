@@ -1,12 +1,14 @@
 
 .main-container {
-  margin: auto;
-  max-width: 1205px;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  background-color: whitesmoke;
-  padding: 2rem;
+   margin-left:10rem;
+    margin-right:10rem;
+    display: flex;
+    justify-content:center ;
+    gap:2rem;
+    padding:2rem;
+    background-color: whitesmoke;
+    width:100%; 
+ 
 }
 
 .dropdown a {

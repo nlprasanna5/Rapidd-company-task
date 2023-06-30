@@ -1,6 +1,4 @@
 .gallery-container {
-    /* margin-left: 10rem;
-    margin-right: 10rem; */
     background-color: #FFFFFF;
     margin-top: 2rem;
    
@@ -51,8 +49,6 @@
     display: flex;
     padding:1rem;
     gap: 1rem;
-    /* border: 2px solid; */
-    /* text-align: center; */
     justify-content: center;
     
 }

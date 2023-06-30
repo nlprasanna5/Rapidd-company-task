@@ -50,12 +50,12 @@ function ImageSection() {
                             Ipsum Lorem
                         </div>
                         <div className='para'>
-                        <p>Adipiscing unde vel so dolore,consequatur.</p>
+                            <p>Adipiscing unde vel so dolore,consequatur.</p>
                         </div>
-                       <div className='second-link'>
-                       <a href='#' className='anchor-links'>Ipsum Lorem</a>
-                       </div>
-                        
+                        <div className='second-link'>
+                            <a href='#' className='anchor-links'>Ipsum Lorem</a>
+                        </div>
+
 
                     </div>
 

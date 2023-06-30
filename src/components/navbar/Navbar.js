@@ -8,7 +8,7 @@ import HomeDropdown from '../homeDropDown/HomeDropdown';
 import AboutDropDown from '../aboutDropDown/AboutDropDown';
 import SkillsDropDown from '../skillsDropDown/SkillsDropDown';
 import ContactDropDown from '../contactDropDown/ContactDropDown';
-import {MdArrowDropDown} from 'react-icons/md';
+import { MdArrowDropDown } from 'react-icons/md';
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
@@ -74,7 +74,7 @@ function Navbar() {
 
         <div className={isMobile ? 'nav-links-mobile' : 'nav-links'} ref={navLinksRef}>
           <div className={`home ${home ? 'underline' : ''}`} onClick={(event) => handleClickHome(event)}>
-            Home {isMobile && <MdArrowDropDown/>}
+            Home {isMobile && <MdArrowDropDown />}
           </div>
           {home && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>
@@ -82,7 +82,7 @@ function Navbar() {
             </div>
           )}
           <div className={`about ${about ? 'underline' : ''}`} onClick={(event) => handleClickAbout(event)}>
-            About {isMobile && <MdArrowDropDown/>}
+            About {isMobile && <MdArrowDropDown />}
           </div>
           {about && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>
@@ -90,7 +90,7 @@ function Navbar() {
             </div>
           )}
           <div className={`skills ${skills ? 'underline' : ''}`} onClick={(event) => handleClickSkills(event)}>
-            Skills {isMobile && <MdArrowDropDown/>}
+            Skills {isMobile && <MdArrowDropDown />}
           </div>
           {skills && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>
@@ -98,7 +98,7 @@ function Navbar() {
             </div>
           )}
           <div className={`contact ${contact ? 'underline' : ''}`} onClick={(event) => handleClickContact(event)}>
-            Contact {isMobile && <MdArrowDropDown/>}
+            Contact {isMobile && <MdArrowDropDown />}
           </div>
           {contact && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>

@@ -19,4 +19,3 @@
 
 ![Desktop navbar](./public/assets/desk-nav.png)
 
-!
