@@ -124,4 +124,18 @@
 } 
 
 
+
+
+@media screen and (min-width: 781px) {
+  .nav-links-mobile {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
  
