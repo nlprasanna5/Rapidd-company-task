@@ -86,7 +86,7 @@
     }
 }
 
-@media screen and (max-width: 780px) and (min-width:325px) {
+@media screen and (max-width: 780px) and (min-width:320px) {
     .second-img-bottom-text {
         display: flex;
         flex-direction: column;

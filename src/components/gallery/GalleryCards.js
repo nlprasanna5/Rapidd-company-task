@@ -16,7 +16,9 @@ function GalleryCards() {
                     <div className='card-img'>
                         <img src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg'
                             alt='snow'
-                            style={{ height: '150px', width: '250px' }}
+                            // style={{ height: '150px', width: '250px' }}
+                            style={{ height: '9.375rem', width: '15.625rem' }}
+                            
                         />
                     </div>
                     <div className='card-text'>
