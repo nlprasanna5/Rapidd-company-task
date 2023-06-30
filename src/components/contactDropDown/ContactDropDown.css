@@ -32,7 +32,7 @@
 .line-para {
   border-bottom: 1px solid grey;
   cursor: pointer;
-  padding: 0.3rem;
+  padding: 1rem;
 }
 
 .line-para:hover {

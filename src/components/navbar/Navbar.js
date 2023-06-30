@@ -33,7 +33,7 @@ function Navbar() {
   }, []);
 
   function handleClickHome(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     setHome(!home);
     setAbout(false);
     setContact(false);
@@ -41,7 +41,7 @@ function Navbar() {
   }
 
   function handleClickAbout(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     setAbout(!about);
     setContact(false);
     setSkills(false);
@@ -49,7 +49,7 @@ function Navbar() {
   }
 
   function handleClickSkills(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     setSkills(!skills);
     setAbout(false);
     setContact(false);
@@ -57,7 +57,7 @@ function Navbar() {
   }
 
   function handleClickContact(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     setContact(!contact);
     setAbout(false);
     setSkills(false);
@@ -125,3 +125,5 @@ function Navbar() {
           };
           
           export default Navbar;
+
+

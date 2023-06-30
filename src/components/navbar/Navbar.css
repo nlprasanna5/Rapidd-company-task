@@ -29,7 +29,7 @@
   flex-direction: column;
   list-style: none;
   background-color: white;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .home,
@@ -84,6 +84,7 @@
     left: 0;
     width: 100%;
     color: black;
+    background-color: #EAEAEA;
   }
 
   .dropItems {
@@ -115,7 +116,12 @@
 
   .underline {
     border-bottom: none;
-    background-color: #F5F5F5;
+    background-color: #EAEAEA;
+   
+    
 
   }
-}
+} 
+
+
+ 
