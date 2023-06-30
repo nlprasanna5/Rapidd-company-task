@@ -1,69 +1,90 @@
-.main-container {
-    /* margin-left:10rem;
-    margin-right:10rem; */
-    margin:auto;
-    max-width: 1205px;
-    display: flex;
-    justify-content:center ;
-    gap:2rem;
-    /* background-color: aliceblue; */
-    /* background-color: #C4CFBA; */
-    /* background-color: #EAEAEA; */
-    /* background-color: #ffff; */
-    background-color: whitesmoke;
-    /* width:100%; */
-    /* border:2px solid red; */
 
+.main-container {
+  margin: auto;
+  max-width: 1205px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: whitesmoke;
+  padding: 2rem;
 }
 
+.dropdown a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
 
-  
-  .dropdown a {
-    text-decoration: none;
-    color: black;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown a:hover {
-    background-color: #f2f2f2;
-  }
-  
+.dropdown a:hover {
+  background-color: #f2f2f2;
+}
 
-.first{
-    display: flex;
-    flex-direction: column;
-    gap:0.5rem;
-    padding:1rem;
+.first {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .second {
-    display: flex;
-    flex-direction: column;
-    gap:0.5rem;
-    padding:1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 1rem;
 }
 
 .headings {
-    font-weight: bold;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .line-para {
-  border-bottom: 1px solid rgb(168, 168, 168);
+  border-bottom: 1px solid rgb(91, 90, 90);
   cursor: pointer;
-  padding:0.3rem;
+  width: 100%;
+  text-align: center;
 }
 
 .line-para:hover {
   background-color: #EAEAEA;
 }
 
-@media screen and (max-width: 768px)  {
-  .main-container{
+@media screen and (max-width: 768px) {
+  .main-container {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 0;
   }
- 
+
+  .first {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+  }
+
+  .line-para {
+    margin: 0.3rem 0;
+    width: 100%;
+    text-align: center;
+  }
 }
