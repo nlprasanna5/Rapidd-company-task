@@ -7,8 +7,8 @@ function GalleryCards() {
         <div className='gallery-container'>
             <div>
             <div className='head'>
-                <p>Official ut</p>
-                <p>Ipsum Lorem</p>
+                <p className='gallery-head-text'>Official ut</p>
+                <p className='gallery-head-link'>Ipsum Lorem</p>
             </div>
 
             <div className='gallery-cards'>

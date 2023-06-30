@@ -33,7 +33,7 @@ function ImageSection() {
                 <div className='second-img-text'>
                     <p>Numquam. <span>Esse aliquip do,magni.</span></p>
                     <h3>Minima ad for vitae sit</h3>
-                    <a href='#' >Lorem Ipsum</a>
+                    <a href='#' className='anchor-links' >Lorem Ipsum</a>
                 </div>
 
                 <div className='second-img-container'>
@@ -53,7 +53,7 @@ function ImageSection() {
                         <p>Adipiscing unde vel so dolore,consequatur.</p>
                         </div>
                        <div className='second-link'>
-                       <a href='#'>Ipsum Lorem</a>
+                       <a href='#' className='anchor-links'>Ipsum Lorem</a>
                        </div>
                         
 

@@ -76,6 +76,11 @@
     display: flex;
 }
 
+.anchor-links {
+    color:black;
+    text-decoration: underline black;
+}
+
 
 @media screen and (max-width: 780px) {
     .image-container{
