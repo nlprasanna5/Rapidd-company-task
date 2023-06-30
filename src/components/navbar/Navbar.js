@@ -1,7 +1,5 @@
 
 
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import HomeDropdown from '../homeDropDown/HomeDropdown';
@@ -19,19 +17,18 @@ function Navbar() {
   const navLinksRef = useRef(null);
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (navLinksRef.current && !navLinksRef.current.contains(event.target)) {
-        // Clicked outside the nav links, close all dropdowns
-        setHome(false);
-        setAbout(false);
-        setSkills(false);
-        setContact(false);
-      }
+    function handleMouseLeave() {
+      // Close all dropdowns
+      setHome(false);
+      setAbout(false);
+      setSkills(false);
+      setContact(false);
     }
 
-    window.addEventListener('click', handleClickOutside);
+    navLinksRef.current.addEventListener('mouseleave', handleMouseLeave);
+
     return () => {
-      window.removeEventListener('click', handleClickOutside);
+      navLinksRef.current.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
@@ -71,9 +68,12 @@ function Navbar() {
     <>
       <nav className="navbar">
         <h3 className="logo">Logo</h3>
-
+  
         <div className={isMobile ? 'nav-links-mobile' : 'nav-links'} ref={navLinksRef}>
-          <div className={`home ${home ? 'underline' : ''}`} onClick={(event) => handleClickHome(event)}>
+          <div
+            className={`home ${home ? 'underline' : ''}`}
+            onMouseOver={(event) => handleClickHome(event)}
+          >
             Home {isMobile && <MdArrowDropDown />}
           </div>
           {home && (
@@ -81,7 +81,10 @@ function Navbar() {
               <HomeDropdown />
             </div>
           )}
-          <div className={`about ${about ? 'underline' : ''}`} onClick={(event) => handleClickAbout(event)}>
+          <div
+            className={`about ${about ? 'underline' : ''}`}
+            onMouseOver={(event) => handleClickAbout(event)}
+          >
             About {isMobile && <MdArrowDropDown />}
           </div>
           {about && (
@@ -89,7 +92,10 @@ function Navbar() {
               <AboutDropDown />
             </div>
           )}
-          <div className={`skills ${skills ? 'underline' : ''}`} onClick={(event) => handleClickSkills(event)}>
+          <div
+            className={`skills ${skills ? 'underline' : ''}`}
+            onMouseOver={(event) => handleClickSkills(event)}
+          >
             Skills {isMobile && <MdArrowDropDown />}
           </div>
           {skills && (
@@ -97,7 +103,10 @@ function Navbar() {
               <SkillsDropDown />
             </div>
           )}
-          <div className={`contact ${contact ? 'underline' : ''}`} onClick={(event) => handleClickContact(event)}>
+          <div
+            className={`contact ${contact ? 'underline' : ''}`}
+            onMouseOver={(event) => handleClickContact(event)}
+          >
             Contact {isMobile && <MdArrowDropDown />}
           </div>
           {contact && (
@@ -106,13 +115,13 @@ function Navbar() {
             </div>
           )}
         </div>
-
+  
         <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
           {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
         </button>
       </nav>
     </>
   );
-}
-
-export default Navbar;
+          };
+          
+          export default Navbar;
