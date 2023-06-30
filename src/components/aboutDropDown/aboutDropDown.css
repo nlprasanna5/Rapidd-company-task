@@ -1,6 +1,8 @@
 .main-container {
-    margin-left:10rem;
-    margin-right:10rem;
+    /* margin-left:10rem;
+    margin-right:10rem; */
+    margin:auto;
+    max-width: 1205px;
     display: flex;
     justify-content:center ;
     gap:2rem;
@@ -9,7 +11,7 @@
     /* background-color: #EAEAEA; */
     /* background-color: #ffff; */
     background-color: whitesmoke;
-    width:100%;
+    /* width:100%; */
     /* border:2px solid red; */
 
 }
