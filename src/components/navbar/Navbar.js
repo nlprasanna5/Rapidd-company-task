@@ -6,6 +6,7 @@ import AboutDropDown from '../aboutDropDown/AboutDropDown';
 import SkillsDropDown from '../skillsDropDown/SkillsDropDown';
 import ContactDropDown from '../contactDropDown/ContactDropDown';
 import { MdArrowDropDown } from 'react-icons/md';
+import { IoMdArrowDropup } from 'react-icons/io';
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
@@ -13,6 +14,7 @@ function Navbar() {
   const [about, setAbout] = useState(false);
   const [skills, setSkills] = useState(false);
   const [contact, setContact] = useState(false);
+  const [dropDownIcon, setDropDownIcon] = useState(false);
   const navLinksRef = useRef(null);
 
   useEffect(() => {
@@ -36,6 +38,7 @@ function Navbar() {
     setAbout(false);
     setContact(false);
     setSkills(false);
+    setDropDownIcon(!dropDownIcon);
   }
 
   function handleClickAbout() {
@@ -43,6 +46,7 @@ function Navbar() {
     setContact(false);
     setSkills(false);
     setHome(false);
+    setDropDownIcon(!dropDownIcon);
   }
 
   function handleClickSkills() {
@@ -50,6 +54,7 @@ function Navbar() {
     setAbout(false);
     setContact(false);
     setHome(false);
+    setDropDownIcon(!dropDownIcon);
   }
 
   function handleClickContact() {
@@ -57,6 +62,7 @@ function Navbar() {
     setAbout(false);
     setSkills(false);
     setHome(false);
+    setDropDownIcon(!dropDownIcon);
   }
 
   return (
@@ -69,7 +75,11 @@ function Navbar() {
             className={`home ${home ? 'underline' : ''}`}
             {...(isMobile ? { onClick: handleClickHome } : { onMouseOver: handleClickHome })}
           >
-            Home {isMobile && <MdArrowDropDown />}
+            Home{
+              isMobile && (
+                dropDownIcon ? <MdArrowDropDown className="dropdown-icon" /> : <IoMdArrowDropup className="dropup-icon" />
+              )
+            }
           </div>
           {home && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>
@@ -80,7 +90,11 @@ function Navbar() {
             className={`about ${about ? 'underline' : ''}`}
             {...(isMobile ? { onClick: handleClickAbout } : { onMouseOver: handleClickAbout })}
           >
-            About {isMobile && <MdArrowDropDown />}
+            About {
+              isMobile && (
+                dropDownIcon ? <MdArrowDropDown className="dropdown-icon" /> : <IoMdArrowDropup className="dropup-icon" />
+              )
+            }
           </div>
           {about && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>
@@ -91,7 +105,11 @@ function Navbar() {
             className={`skills ${skills ? 'underline' : ''}`}
             {...(isMobile ? { onClick: handleClickSkills } : { onMouseOver: handleClickSkills })}
           >
-            Skills {isMobile && <MdArrowDropDown />}
+            Skills {
+              isMobile && (
+                dropDownIcon ? <MdArrowDropDown className="dropdown-icon" /> : <IoMdArrowDropup className="dropup-icon" />
+              )
+            }
           </div>
           {skills && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>
@@ -102,7 +120,11 @@ function Navbar() {
             className={`contact ${contact ? 'underline' : ''}`}
             {...(isMobile ? { onClick: handleClickContact } : { onMouseOver: handleClickContact })}
           >
-            Contact {isMobile && <MdArrowDropDown />}
+            Contact{
+              isMobile && (
+                dropDownIcon ? <MdArrowDropDown className="dropdown-icon" /> : <IoMdArrowDropup className="dropup-icon" />
+              )
+            }
           </div>
           {contact && (
             <div className={isMobile ? 'dropItems' : 'dropdown'}>

@@ -52,7 +52,7 @@
 
 .dropdown {
   position: absolute;
-  top: 3.7rem;
+  top: 4rem;
   left: 0.15rem;
   right: 20rem;
 }
@@ -116,11 +116,16 @@
 
   .underline {
     border-bottom: none;
-    background-color: #EAEAEA;
-   
-    
-
+    background-color: #EAEAEA;  
   }
+
+  /* .dropdown-icon {
+    margin-left:1.5rem;
+  }
+
+  .dropup-icon {
+    margin-left: 1rem;
+  } */
 } 
 
 
